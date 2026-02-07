@@ -79,7 +79,6 @@ public class login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 440, 510));
 
-        username_field.setBackground(new java.awt.Color(255, 255, 255));
         username_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_fieldActionPerformed(evt);
@@ -89,17 +88,13 @@ public class login extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Username:");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, 80, 30));
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Password:");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, 70, 30));
 
-        password_field.setBackground(new java.awt.Color(255, 255, 255));
-        password_field.setForeground(new java.awt.Color(0, 0, 0));
         password_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 password_fieldActionPerformed(evt);
@@ -121,7 +116,6 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("LOGIN");
         login.add(jLabel4);
 
@@ -141,14 +135,12 @@ public class login extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("CANCEL");
         cancel.add(jLabel6);
 
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, 70, 30));
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Don't have an account? Click here to Register.");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -156,10 +148,9 @@ public class login extends javax.swing.JFrame {
                 jLabel7MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, -1));
 
         minimize.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        minimize.setForeground(new java.awt.Color(0, 0, 0));
         minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         minimize.setText("—");
         minimize.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -170,7 +161,6 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, 40, -1));
 
         close.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        close.setForeground(new java.awt.Color(0, 0, 0));
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         close.setText("X");
         close.addMouseListener(new java.awt.event.MouseAdapter() {

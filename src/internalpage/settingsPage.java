@@ -47,12 +47,12 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         logout = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         manageuser = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -70,13 +70,11 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel2.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("ADDRESS: USER ADDRESS LOCATION");
         jPanel2.add(jLabel1);
         jLabel1.setBounds(50, 130, 370, 30);
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("ACCOUNT SETTINGS");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(20, 20, 370, 50);
@@ -84,16 +82,15 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(153, 153, 153));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Downloads\\icons8-man-100.png")); // NOI18N
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 140, 130));
-
         jLabel14.setBackground(new java.awt.Color(0, 0, 0));
         jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("USERNAME HERE");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, 20));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpage/icons8-man-80.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 170));
 
         jPanel2.add(jPanel3);
         jPanel3.setBounds(530, 30, 140, 220);
@@ -116,16 +113,14 @@ public class settingsPage extends javax.swing.JInternalFrame {
         });
         logout.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Administrator\\Downloads\\icons8-logout-100.png")); // NOI18N
-        logout.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 130, 110));
-
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("LOG OUT");
         logout.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 100, 16));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/internalpage/icons8-log-out-100.png"))); // NOI18N
+        logout.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 138, -1));
 
         jPanel1.add(logout);
         logout.setBounds(520, 10, 150, 160);
@@ -147,7 +142,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
         jLabel12.setBackground(new java.awt.Color(0, 0, 0));
         jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("EDIT PROFILE");
         manageuser.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
@@ -177,7 +171,6 @@ public class settingsPage extends javax.swing.JInternalFrame {
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("REPORTS");
         reportss.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 100, 16));
@@ -189,19 +182,16 @@ public class settingsPage extends javax.swing.JInternalFrame {
         jPanel1.setBounds(0, 250, 740, 210);
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("ACCOUNT NAME: USERNAME HERE");
         jPanel2.add(jLabel9);
         jLabel9.setBounds(50, 70, 370, 30);
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("POSITION: ADMIN");
         jPanel2.add(jLabel10);
         jLabel10.setBounds(50, 90, 370, 30);
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("EMAIL: USER@GMAIL.COM");
         jPanel2.add(jLabel11);
         jLabel11.setBounds(50, 110, 370, 30);
@@ -252,12 +242,12 @@ public class settingsPage extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

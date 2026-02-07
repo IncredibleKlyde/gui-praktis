@@ -1,3 +1,6 @@
+
+import database.Database;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -49,11 +52,9 @@ public class Register extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Full Name:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 100, 20));
 
-        fullname_field.setBackground(new java.awt.Color(255, 255, 255));
         fullname_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fullname_fieldActionPerformed(evt);
@@ -62,50 +63,35 @@ public class Register extends javax.swing.JFrame {
         jPanel1.add(fullname_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 250, 170, -1));
 
         jLabel2.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Username:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, 80, 20));
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Email:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 70, 20));
 
-        username_field.setBackground(new java.awt.Color(255, 255, 255));
         username_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_fieldActionPerformed(evt);
             }
         });
         jPanel1.add(username_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 280, 170, -1));
-
-        password_field.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(password_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 310, 170, -1));
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Mobile Number:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 120, -1));
-
-        confirmpassword_field.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(confirmpassword_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 340, 170, -1));
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Password:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 310, 80, -1));
 
         jfiled.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jfiled.setForeground(new java.awt.Color(0, 0, 0));
         jfiled.setText("Confirm Password:");
         jPanel1.add(jfiled, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 340, 140, -1));
-
-        email_field.setBackground(new java.awt.Color(255, 255, 255));
-        email_field.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(email_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 170, -1));
-
-        number_field.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.add(number_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 170, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/small Blue Bold Fishing Hook Adventure Logo.png"))); // NOI18N
@@ -145,6 +131,7 @@ public class Register extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void username_fieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_username_fieldActionPerformed

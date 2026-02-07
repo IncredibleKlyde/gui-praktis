@@ -1,12 +1,16 @@
 package myapp;
 
 
+import database.Database;
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.sql.Connection;
 import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
+import database.Database;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,12 +23,15 @@ import javax.swing.border.Border;
  * @author Administrator
  */
 public class registrationForm extends javax.swing.JFrame {
+    
+   
 
     /**
      * Creates new form login
      */
     public registrationForm() {
         initComponents();
+       Connection con = Database.connectDB();
     }
     
     Color hover = new Color(024,204,204);
@@ -57,23 +64,23 @@ public class registrationForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         username_field = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        username = new javax.swing.JLabel();
+        password = new javax.swing.JLabel();
         password_field = new javax.swing.JPasswordField();
-        login = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        register = new javax.swing.JPanel();
+        label = new javax.swing.JLabel();
         cancel = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        fullname = new javax.swing.JLabel();
         username_field1 = new javax.swing.JTextField();
         username_field2 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
         username_field3 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        number = new javax.swing.JLabel();
+        type = new javax.swing.JLabel();
         username_field4 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,7 +94,6 @@ public class registrationForm extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 440, 510));
 
-        username_field.setBackground(new java.awt.Color(255, 255, 255));
         username_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_fieldActionPerformed(evt);
@@ -95,19 +101,15 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(username_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 160, 30));
 
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Username:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 80, 30));
+        username.setBackground(new java.awt.Color(0, 0, 0));
+        username.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        username.setText("Username:");
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 120, 80, 30));
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Password:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 70, 30));
+        password.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        password.setText("Password:");
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 160, 70, 30));
 
-        password_field.setBackground(new java.awt.Color(255, 255, 255));
-        password_field.setForeground(new java.awt.Color(0, 0, 0));
         password_field.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 password_fieldActionPerformed(evt);
@@ -115,25 +117,24 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(password_field, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 160, 30));
 
-        login.setBackground(new java.awt.Color(187, 187, 187));
-        login.addMouseListener(new java.awt.event.MouseAdapter() {
+        register.setBackground(new java.awt.Color(187, 187, 187));
+        register.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginMouseClicked(evt);
+                registerMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                loginMouseEntered(evt);
+                registerMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                loginMouseExited(evt);
+                registerMouseExited(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("LOGIN");
-        login.add(jLabel4);
+        label.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        label.setText("REGISTER");
+        register.add(label);
 
-        getContentPane().add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 70, 30));
+        getContentPane().add(register, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 70, 30));
 
         cancel.setBackground(new java.awt.Color(187, 187, 187));
         cancel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -146,14 +147,12 @@ public class registrationForm extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("CANCEL");
         cancel.add(jLabel6);
 
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 340, 70, 30));
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("REGISTRATION FORM");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, -1, -1));
@@ -169,7 +168,6 @@ public class registrationForm extends javax.swing.JFrame {
         getContentPane().add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 40, -1));
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Already have an account? Click here to Login");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -179,13 +177,11 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, -1));
 
-        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Full name:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 80, 30));
+        fullname.setBackground(new java.awt.Color(0, 0, 0));
+        fullname.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        fullname.setText("Full name:");
+        getContentPane().add(fullname, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, 80, 30));
 
-        username_field1.setBackground(new java.awt.Color(255, 255, 255));
         username_field1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_field1ActionPerformed(evt);
@@ -193,7 +189,6 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(username_field1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 160, 30));
 
-        username_field2.setBackground(new java.awt.Color(255, 255, 255));
         username_field2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_field2ActionPerformed(evt);
@@ -201,13 +196,11 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(username_field2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 160, 30));
 
-        jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Email:");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 80, 30));
+        email.setBackground(new java.awt.Color(0, 0, 0));
+        email.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        email.setText("Email:");
+        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 80, 30));
 
-        username_field3.setBackground(new java.awt.Color(255, 255, 255));
         username_field3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_field3ActionPerformed(evt);
@@ -215,19 +208,16 @@ public class registrationForm extends javax.swing.JFrame {
         });
         getContentPane().add(username_field3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 160, 30));
 
-        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Number:");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 80, 30));
+        number.setBackground(new java.awt.Color(0, 0, 0));
+        number.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        number.setText("Number:");
+        getContentPane().add(number, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 200, 80, 30));
 
-        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Type:");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 80, 30));
+        type.setBackground(new java.awt.Color(0, 0, 0));
+        type.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        type.setText("Type:");
+        getContentPane().add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, 80, 30));
 
-        username_field4.setBackground(new java.awt.Color(255, 255, 255));
         username_field4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 username_field4ActionPerformed(evt);
@@ -255,19 +245,27 @@ public class registrationForm extends javax.swing.JFrame {
         buttonDefaultColor(cancel);
     }//GEN-LAST:event_cancelMouseExited
 
-    private void loginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseEntered
-        buttonBorderAnimation(login);
-    }//GEN-LAST:event_loginMouseEntered
+    private void registerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseEntered
+        buttonBorderAnimation(register);
+    }//GEN-LAST:event_registerMouseEntered
 
-    private void loginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseExited
-        buttonDefaultColor(login);
-    }//GEN-LAST:event_loginMouseExited
+    private void registerMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseExited
+        buttonDefaultColor(register);
+    }//GEN-LAST:event_registerMouseExited
 
-    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+    private void registerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerMouseClicked
         dashboard dash = new  dashboard();
         this.dispose();
         dash.setVisible(true);
-    }//GEN-LAST:event_loginMouseClicked
+        
+            if((!email.getText().isEmpty() || !username.getText().isEmpty())|| !fullname.getText().isEmpty() && !password.getText().isEmpty()){
+                JOptionPane.showMessageDialog(this, "All Fields are required","Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+                Database db = new Database();
+                String sql = "INSERT INTO users (fullname,username,email,password,type,status)VALUES (?,?,?,?,?,?)";
+                db.addRecord(sql, fullname.getText(), username.getText(),email.getText(), "Inactive", type.getText(),password.getText());
+        }
+    }//GEN-LAST:event_registerMouseClicked
 
     private void minimizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minimizeMouseClicked
         setState(ICONIFIED);
@@ -333,22 +331,22 @@ public class registrationForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cancel;
+    private javax.swing.JLabel email;
+    private javax.swing.JLabel fullname;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel login;
+    private javax.swing.JLabel label;
     private javax.swing.JLabel minimize;
+    private javax.swing.JLabel number;
+    private javax.swing.JLabel password;
     private javax.swing.JPasswordField password_field;
+    private javax.swing.JPanel register;
+    private javax.swing.JLabel type;
+    private javax.swing.JLabel username;
     private javax.swing.JTextField username_field;
     private javax.swing.JTextField username_field1;
     private javax.swing.JTextField username_field2;
